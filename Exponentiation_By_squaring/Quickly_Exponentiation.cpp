@@ -24,3 +24,20 @@ long long Exponentiation::QuicklyExponentiation(long long Base, long long Exp)
     }
     return -1;
 }
+
+long long Exponentiation::QuicklyExponentiationModulo(long long Base, long long Exp, long long Mod)
+{
+    if(Exp == 1)
+    {
+        return 1;
+    }
+    else if(Exp % 2 == 1)
+    {
+        return Base * QuicklyExponentiationModulo(Base, Exp - 1, Mod) % Mod;
+    }
+    else
+    {
+        long long temp = QuicklyExponentiationModulo(Base, Exp / 2, Mod) % Mod;
+        return temp * temp % Mod;
+    }
+}
