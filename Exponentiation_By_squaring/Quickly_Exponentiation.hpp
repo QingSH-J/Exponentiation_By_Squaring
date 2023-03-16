@@ -15,5 +15,6 @@ class Exponentiation
 {
 public:
     long long QuicklyExponentiation(long long Base, long long Exp);
+    long long QuicklyExponentiationModulo(long long Base, long long Exp, long long Mod);
 };
 #endif /* Quickly_Exponentiation_hpp */
