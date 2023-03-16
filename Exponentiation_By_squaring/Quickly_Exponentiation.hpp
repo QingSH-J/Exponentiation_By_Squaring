@@ -16,5 +16,6 @@ class Exponentiation
 public:
     long long QuicklyExponentiation(long long Base, long long Exp);
     long long QuicklyExponentiationModulo(long long Base, long long Exp, long long Mod);
+    long long BinaryExponentiation(long long Base, long long Exp);
 };
 #endif /* Quickly_Exponentiation_hpp */
