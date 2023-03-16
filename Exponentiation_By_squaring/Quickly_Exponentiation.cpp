@@ -41,3 +41,18 @@ long long Exponentiation::QuicklyExponentiationModulo(long long Base, long long 
         return temp * temp % Mod;
     }
 }
+
+long long Exponentiation::BinaryExponentiation(long long Base, long long Exp)
+{
+    long long ans = 1;
+    while(Exp != 0)
+    {
+        if(Exp & 1)
+        {
+            ans *= Base;
+        }
+        Base *= Base;
+        Exp >>= 1;
+    }
+    return ans;
+}
